@@ -13,4 +13,16 @@ public class LuckySkyScraper {
 
         }
     }
+
+    static public int roRealFloor(int fakeFloorGoal){
+        var fakeFloor = 1;
+        for(var realFloor = 1; realFloor <= fakeFloorGoal; realFloor++){
+            if(fakeFloorGoal == fakeFloor){
+                return realFloor;
+            }do {
+                fakeFloor++;
+            } while(fakeFloor % 10 == 4 || fakeFloor % 100 == 13);
+        }
+        return -1;
+    }
 }
